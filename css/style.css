@@ -1,63 +1,71 @@
 body{
-  margin: 0;
-  padding: 0;
-  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #A4A4A4;
 }
 
+.container {
+  flex: 1;
+}
+span{
+  font-weight: bold;
+}
 img{
-  width: 200px;
-  height:200px;
+  width: 250px;
+  height:250px;
+  justify-content: center;
+  align-items: center;
 }
 
-header{
-  padding: 1% 0 1% 0;
-  background-color: #000000;
-  text-align: left;
-  font-size: 20px;
-  font-family: 'Lobster', cursive;
-  color: #DF0101;
-
- }
-.panier{
-  text-align: right;
-  margin-right: 5%;
-}
 
 a{
   text-decoration: none;
-  color: #DF0101;
+  font-size : 15px;
+  font-weight: bold;
+  color: #151515;
 }
 
-#main{
-  margin: 5%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-}
-footer{
-      width: 100%;
-      bottom: 0;
-      margin-top: 5%;
-      position: fixed;
-      background-color: #6E6E6E;
-      font-size: 18px;
-      line-height: 1em;
-      color:#FFFFFF;
-}
-
-h2{
-      text-align: center;
-      font-size: 18px;
-      font-family: 'Lobster', cursive;
-      color: #DF0101;
-}
-h3{
-  font-size: 15px;
+caption{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 25px;
   font-family: 'Lobster', cursive;
-  color: #FFFFFF;
+  color: #151515;
+  font-weight: bold;
+  caption-side: top;
 }
+
+h1,h2{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 25px;
+  font-family: 'Lobster', cursive;
+  color: #151515;
+
+}
+h3,.underline{
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-family: 'Lobster', cursive;
+  color: #151515;
+}
+
+
+
+
+/* Animation CSS pour la Validation des données Formulaire */
+input:valid{
+  border: 2px solid green;
+}
+input:invalid{
+  border: 2px dashed red;
+}
+
+
+/* Footer */
+
 .fab {
     padding: 20px;
     font-size: 20px;
@@ -66,24 +74,16 @@ h3{
 
 }
 
-
-.social{
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.reseaux{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 .fa-twitter {
     color: white;
 }
-
-.fa-instagram {
+.fa-facebook-f{
   color: white;
 }
+.fa-instagram {
+  color: white;
+
+}
+
+
+/* Responsive */
