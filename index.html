@@ -6,38 +6,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <meta name="robots" content="index, follow">
   <script src="https://kit.fontawesome.com/71699829a5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <title>Orinoco, vente de Caméra Vintage</title>
 
 </head>
 
-  <body class="container">
-    <header>
-      <h1>Orinoco Caméra Vintage</h1>
-      <div class="panier">
-        <a href="panier.html" <i class="fas fa-cart-arrow-down"></i></a>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="index.html">Onorico</a>
+
+    <div class="collapse navbar-collapse float-right mr-2" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html"><span>Accueil</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="panier.html"><span>Mon Panier</span></a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+    <main class="container" >
+      <div class="row mt-5" id="main"></div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small special-color-dark footer-dark bg-dark pt-4">
+
+  <!-- Footer Elements -->
+      <div class="container">
+
+    <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a href="#" class="btn-floating btn-fb mx-1">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="btn-floating btn-tw mx-1">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="btn-floating btn-instagram mx-1">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+    <!-- Social buttons -->
+
       </div>
+  <!-- Footer Elements -->
 
-    </header>
-    <section id="main">
-    </section>
-
-
-    <footer>
-      <div class="contact">
-        <h2>Onorico Caméra Vintage</h2>
-        <a href="mailto:cameravintage@onorico.com"><p><span>Contactez-nous</span></p></a>
+  <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="#">OnoricoCaméraVintage.com</a>
       </div>
+  <!-- Copyright -->
 
-      <div class="social">
-        <h3>Suivez-nous sur les réseaux sociaux</h3><br />
-        <div class="reseaux">
-          <a href="#"  <i class="fab fa-twitter"></i></a>
-          <a href="#" <i class="fab fa-facebook-f"></i></a>
-          <a href="#" <i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
     </footer>
 
     <script src="./scripts/index.js"></script>
