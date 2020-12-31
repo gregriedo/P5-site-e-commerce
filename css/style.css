@@ -2,21 +2,19 @@ body{
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: #A4A4A4;
+  background-color: #f8c291;
+
 }
 
 .container {
   flex: 1;
 }
-span{
-  font-weight: bold;
-}
+
 img{
-  width: 250px;
-  height:250px;
-  justify-content: center;
-  align-items: center;
+  width: auto;
+  height:auto;
 }
+
 
 
 a{
@@ -51,39 +49,91 @@ h3,.underline{
   font-family: 'Lobster', cursive;
   color: #151515;
 }
+.confirmation{
+  font-size: 20px;
+  margin: 5% 2% 5% 2%;
+  padding: 2%;
+  text-align: center;
+  background-color: #fd9644;
+}
 
+span{
+  font-weight: bold;
+}
 
+.btn_quantity{
+  margin-left: 5%;
+}
 
 
 /* Animation CSS pour la Validation des données Formulaire */
 input:valid{
   border: 2px solid green;
 }
+
 input:invalid{
-  border: 2px dashed red;
+  border: 2px solid red;
 }
 
 
 /* Footer */
+.link{
+  color: #f8c291;
+}
 
-.fab {
+.fab,.fas {
     padding: 20px;
     font-size: 20px;
-    width: 50px;
+    width: 60px;
     justify-content: space-between;
-
-}
-
-.fa-twitter {
-    color: white;
-}
-.fa-facebook-f{
-  color: white;
-}
-.fa-instagram {
-  color: white;
+    border-radius: 50%;
+    color: black;
+    background-color: #f8c291;
 
 }
 
 
-/* Responsive */
+
+/*Responsive Smartphone*/
+@media all and (max-width: 600px){
+  #main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img{
+    width: auto;
+    height:auto;
+  }
+
+  .btn{
+    float: none;
+    margin-right: 20%;
+  }
+  .confirmation{
+    text-align: justify;
+
+
+  }
+}
+
+
+/*Responsive Tablette */
+@media all and (min-width: 600px) and (max-width: 1024px){
+  caption{
+    margin-top: 10%;
+  }
+  #main{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+  }
+  img{
+    width: auto;
+    height: auto;
+  }
+}
