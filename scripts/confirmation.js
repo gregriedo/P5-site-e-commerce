@@ -6,5 +6,4 @@ userOrder.innerHTML = orderId;
 let somme = document.getElementById("order_total");
 somme.innerHTML= totalPrice;
 
-
 localStorage.clear();
