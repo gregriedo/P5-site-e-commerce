@@ -6,6 +6,7 @@ let totalPrices=0;
 
 let products=[];
 
+//Ajout des produits dans le tableau récapitulatif de la commande
 
   panier.forEach(element=>{
     totalPrices = totalPrices + (element.prix * element.quantite);
@@ -24,6 +25,8 @@ let mail = document.getElementById('email');
 let adresse = document.getElementById('adresse');
 let ville = document.getElementById('ville');
 let codePostal = document.getElementById('codepostal');
+
+// Validation du formulaire et envoie de la Commande
 
 form.addEventListener('submit', e=>{
   e.preventDefault();
