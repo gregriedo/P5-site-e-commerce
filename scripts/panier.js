@@ -54,7 +54,8 @@ form.addEventListener('submit', e=>{
     let button = document.createElement("button");
     button.innerHTML = "-";
     button.classList = "btn_quantity";
-    button.id = element.id;
+    button.id = element.id+'-'+element.lenses;
+
     let td3 = document.createElement("td");
     td3.innerHTML = element.quantite * element.prix+ "€";
     let td4 = document.createElement("td");
@@ -72,12 +73,16 @@ form.addEventListener('submit', e=>{
       totalPrices=0;
       arrayId = 0;
       panier.forEach(element=>{
-          if(button.id==element.id){
+
+        let idElement=button.id.substr(0,24);
+        let lensesElement=button.id.substr(25, button.id.length);
+        console.log(lensesElement);
+          if(element.id==idElement && element.lenses==lensesElement){
             element.quantite--;
             td2.innerHTML=element.quantite;
             td2.appendChild(button);
 
-            if(element.quantite<1){
+            if(element.quantite<1 && idElement==element.id){
               td2.parentNode.remove();
               td2.innerHTML=element.quantite;
               panier.splice(arrayId, 1);
