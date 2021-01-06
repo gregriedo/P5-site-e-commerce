@@ -103,6 +103,6 @@ function addToCart(element) {
         }
 
         localStorage.setItem('panier', JSON.stringify(panier));
-      alert("Votre article a été ajouté !!")
+      alert("Votre article a été ajouté au panier !!")
   });
 };
