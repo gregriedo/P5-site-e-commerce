@@ -33,7 +33,7 @@ function showCamera (element){
   img.src=element.imageUrl;
   img.classList='w-100';
   let p=document.createElement("p");
-  p.innerHTML=element.price + "€";
+  p.innerHTML=element.price/100 + "€";
   div.appendChild(a);
   div.appendChild(img);
   div.appendChild(p);
