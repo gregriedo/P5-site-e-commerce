@@ -44,7 +44,7 @@ function displayElements(element){
   let title=document.createElement("h3");
   title.innerHTML="Prix";
   let p=document.createElement("p");
-  p.innerHTML=element.price + "€";
+  p.innerHTML=element.price/100+ "€";
   let title2=document.createElement("h3");
   title2.innerHTML="Description du produit";
   let p2=document.createElement("p");
@@ -94,7 +94,7 @@ function addToCart(element) {
           let camera={
             id: id,
             nom:element.name,
-            prix:element.price,
+            prix:element.price/100,
             description:element.description,
             lenses:select.value,
             quantite:1,
