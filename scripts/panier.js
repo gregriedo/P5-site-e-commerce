@@ -1,5 +1,6 @@
 let panier = JSON.parse(localStorage.getItem('panier'));
 let tbody = document.getElementById("panier");
+
 let td6=document.createElement("td");
 let totalPrices=0;
 
@@ -7,14 +8,23 @@ let totalPrices=0;
 let products=[];
 
 //Ajout des produits dans le tableau récapitulatif de la commande
-
+if(localStorage.length>0){
   panier.forEach(element=>{
-    totalPrices = totalPrices + (element.prix * element.quantite);
-     displayCart(element);
-
-     products.push(element.id);
-   })
+      totalPrices = totalPrices + (element.prix * element.quantite);
+       displayCart(element);
+       products.push(element.id);
+    })
     subTotal(totalPrices,tbody);
+}else{
+  alert("Votre Panier est vide !");
+}
+
+
+
+
+
+
+
 
 
 let form= document.querySelector('#contact');
@@ -41,6 +51,8 @@ form.addEventListener('submit', e=>{
   sendOrders(contact,products);
 
 });
+
+
 
   // Création du tableau de la commande
   // A tester pour etre sur que le total prend bien compte le prix et la quantité
@@ -72,11 +84,12 @@ form.addEventListener('submit', e=>{
       e.preventDefault();
       totalPrices=0;
       arrayId = 0;
+      panier = [];
       panier.forEach(element=>{
 
         let idElement=button.id.substr(0,24);
         let lensesElement=button.id.substr(25, button.id.length);
-        console.log(lensesElement);
+        
           if(element.id==idElement && element.lenses==lensesElement){
             element.quantite--;
             td2.innerHTML=element.quantite;
@@ -86,7 +99,6 @@ form.addEventListener('submit', e=>{
               td2.parentNode.remove();
               td2.innerHTML=element.quantite;
               panier.splice(arrayId, 1);
-
 
             }
 
