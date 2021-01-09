@@ -5,10 +5,11 @@ let td6=document.createElement("td");
 let totalPrices=0;
 
 
+
 let products=[];
 
 //Ajout des produits dans le tableau récapitulatif de la commande
-if(localStorage.length>0){
+if(localStorage.length >0){
   panier.forEach(element=>{
       totalPrices = totalPrices + (element.prix * element.quantite);
        displayCart(element);
@@ -84,12 +85,11 @@ form.addEventListener('submit', e=>{
       e.preventDefault();
       totalPrices=0;
       arrayId = 0;
-      panier = [];
       panier.forEach(element=>{
 
         let idElement=button.id.substr(0,24);
         let lensesElement=button.id.substr(25, button.id.length);
-        
+
           if(element.id==idElement && element.lenses==lensesElement){
             element.quantite--;
             td2.innerHTML=element.quantite;
